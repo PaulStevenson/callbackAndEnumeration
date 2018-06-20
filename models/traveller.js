@@ -28,14 +28,21 @@ Traveller.prototype.getModesOfTransport = function (transport) {
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
-
+    return this.journeys.filter((journey) => {
+        return journey.transport === transport;
+    })
 };
 
-Traveller.prototype.getJourneysByMinDistance = function (minDistance) {
-
+Traveller.prototype.getJourneysByMinDistance = function (distance) {
+    // return this.journeys.filter((journey) => {
+    //     return journey.distance === distance;
+    // })
 };
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
+    return this.journeys.reduce((total, journey) => {
+        return total + journey.distance;
+    }, 0);
 
 };
 
