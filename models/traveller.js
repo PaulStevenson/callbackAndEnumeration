@@ -3,19 +3,16 @@ const Traveller = function(journeys) {
 };
 
 Traveller.prototype.journeys = function () {
-    const objectArray = this.journeys.map((journey) => {
+    return this.journeys.map((journey) => {
         return journey;
     });
-    return objectArray;
 
 };
 
 Traveller.prototype.getJourneyStartLocations = function(startLocation) {
-    // const objectArray = this.traveller.getStartLovation.find((jojourney) => {
-    //     return journey.startLocation === startLocation;
-    // });
-    // return objectArray
-
+    return this.journeys.find((journey) => {
+        return journey.startLocation === startLocation;
+    });
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {

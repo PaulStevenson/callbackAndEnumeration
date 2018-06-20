@@ -28,15 +28,15 @@ describe('Traveller', function() {
   });
 
   xit('should be able to get the journeys start locations', function() {
-    const actual = [
-      journey1.startLocation,
-      journey2.startLocation,
-      journey3.startLocation,
-      journey4.startLocation,
-      journey5.startLocation
-    ];
-    assert.deepStrictEqual(actual, traveller.getJourneyStartLocations());
-  });
+      const actual = [
+        journey1.startLocation,
+        journey2.startLocation,
+        journey3.startLocation,
+        journey4.startLocation,
+        journey5.startLocation
+      ];
+      assert.deepStrictEqual(actual, traveller.getJourneyStartLocations());
+    });
 
   xit('should be able to get the journeys end locations', function() {
     const actual = [
