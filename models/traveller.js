@@ -9,14 +9,16 @@ Traveller.prototype.journeys = function () {
 
 };
 
-Traveller.prototype.getJourneyStartLocations = function(startLocation) {
-    return this.journeys.find((journey) => {
-        return journey.startLocation === startLocation;
-    });
+Traveller.prototype.getJourneyStartLocations = function() {
+  return this.journeys.map((journey) => {
+    return journey.startLocation;
+  });
 };
 
-Traveller.prototype.getJourneyEndLocations = function () {
-
+Traveller.prototype.getJourneyEndLocations = function (endLocation) {
+    return this.journeys.map((journey) => {
+      return journey.endLocation;
+    });
 };
 
 Traveller.prototype.getModesOfTransport = function () {
