@@ -34,9 +34,9 @@ Traveller.prototype.getJourneysByTransport = function (transport) {
 };
 
 Traveller.prototype.getJourneysByMinDistance = function (distance) {
-    // return this.journeys.filter((journey) => {
-    //     return journey.distance === distance;
-    // })
+    return this.journeys.filter((journey) => {
+        return journey.distance >= distance;
+    })
 };
 
 Traveller.prototype.calculateTotalDistanceTravelled = function () {
@@ -46,8 +46,7 @@ Traveller.prototype.calculateTotalDistanceTravelled = function () {
 
 };
 
-Traveller.prototype.getUniqueModesOfTransport = function () {
-
+Traveller.prototype.getUniqueModesOfTransport = function (property, value) {
 };
 
 
